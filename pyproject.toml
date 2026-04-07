@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fprime-cookie-maker"
+dynamic = ["version"]
+description = "Generate cookiecutter templates from existing F Prime artifact folders"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+fprime-cookie-maker = "fprime_cookie_maker:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
